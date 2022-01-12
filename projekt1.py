@@ -43,19 +43,16 @@ pokus = 3
 
 while uzivatele.get(jmeno := input('Zadejte jmeno: ')) != (heslo := input('Zadejte heslo: ')):
     pokus = pokus - 1
-
     # Sem se dostane na první dva neúspěšné pokusy.
     if pokus in range(1, 3):
         print(oddelovac1, 'Jméno nebo heslo jsou chybně zadány.'.center(len(oddelovac1)),
               'Máte ještě tento počet pokusů:'.center(len(oddelovac1)), f'{pokus}'.center(len(oddelovac1)),
               oddelovac1, sep='\n')
-
     # Sem se dostane po třetím neúspěšném pokusu a program skončí.
     else:
         print(oddelovac1, 'Přihlášení se nepovedlo.'.center(len(oddelovac1)),
               'Podívejte se do svého e-mailu nebo se zaregistrujte.'.center(len(oddelovac1)), oddelovac1, sep='\n')
         quit()
-
 # Sem se dostane, když se úspěšně přihlásí
 else:
     print(oddelovac2, 'Vítáme Vás v textovém analyzátoru'.center(len(oddelovac1)),
