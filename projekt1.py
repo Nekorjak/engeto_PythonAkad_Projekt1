@@ -1,5 +1,5 @@
 from time import sleep
-import pprint
+from pprint import pprint
 
 
 TEXTS = ['''
@@ -70,7 +70,7 @@ TEXTS_slovnik = {x: pismeno for x, pismeno in enumerate(cleartext, 1)}
 
 # Prodleva tisku textů na 3 sekundy, aby uživatel viděl hlášku, než se mu posune obrazovka
 sleep(2)
-pprint.pprint(TEXTS_slovnik)
+pprint(TEXTS_slovnik)
 
 # Výběr textu a následná kontrola inputu
 cislo_textu = input(f'\nPRO ANALÝZU SI VYBER ČÍSLO JEDNOHO Z TEXTŮ: ')
