@@ -56,7 +56,7 @@ while uzivatele.get(jmeno := input('Zadejte jmeno: ')) != (heslo := input('Zadej
 # Sem se dostane, když se úspěšně přihlásí
 else:
     print(oddelovac2, 'Vítáme Vás v textovém analyzátoru'.center(len(oddelovac1)),
-          'Na výběr máte yto texty:'.center(len(oddelovac1)), oddelovac2, sep='\n')
+          'Na výběr máte tyto texty:'.center(len(oddelovac1)), oddelovac2, sep='\n')
 
 # 4. Program nechá uživatel vybrat mezi třemi texty, uloženými v proměnné TEXTS. Pokud uživatel vybere takové číslo
 # textu, které není v zadání, program jej upozorní a skončí. Pokud uživatel zadá jiný vstup než číslo,
@@ -135,6 +135,8 @@ delka_slov.sort()
 slovnik_delka_slov = {delka: delka_slov.count(delka) for delka in delka_slov}
 
 # Tisk grafu
-print(f"\n{'LEN': <4}{'|' :>0}{'OCCURENCES' :^16}{'|' :>0} {'NR' : <1}\n{'-' * 25}")
+print(f"\n{'LEN': <4}{'|' :>0}{'OCCURENCES' :^20}{'|' :>0} {'NR' : <1}\n{'-' * 29}")
 for delka, frekvence in slovnik_delka_slov.items():
-    print(f"{delka :<4}{'|' :>0}{'*' * frekvence :<12}{'|' :>5} {frekvence :<1}")
+    print(f"{delka :<4}{'|' :>0}{'*' * frekvence :<16}{'|' :>5} {frekvence :<1}")
+#zarovnávání v printu je uděláno ručně, tedy blbě, protože při změně výstupů (třeba velký počet hvězdiček) to asi nebude
+# sedět. Jak to zarovnávání řídit právě podle měnících se prvků v grafu, to zatím netuším.
