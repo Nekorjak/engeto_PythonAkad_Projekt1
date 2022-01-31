@@ -40,8 +40,10 @@ uzivatele = {'bob': '123', 'ann': 'pass123', 'nike': 'password123', 'liz': 'pass
 # Nastavil jsem přihlášení na tři pokusy - jestli takový kód zvládnu.
 
 pokus = 3
+jmeno = input('Zadejte jmeno: ')
+heslo = input('Zadejte jmeno: ')
 
-while uzivatele.get(jmeno := input('Zadejte jmeno: ')) != (heslo := input('Zadejte heslo: ')):
+while uzivatele.get(jmeno) != heslo:
     pokus = pokus - 1
     # Sem se dostane na první dva neúspěšné pokusy.
     if pokus in range(1, 3):
