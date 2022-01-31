@@ -140,5 +140,6 @@ slovnik_delka_slov = {delka: delka_slov.count(delka) for delka in delka_slov}
 print(f"\n{'LEN': <4}{'|' :>0}{'OCCURENCES' :^20}{'|' :>0} {'NR' : <1}\n{'-' * 29}")
 for delka, frekvence in slovnik_delka_slov.items():
     print(f"{delka :<4}{'|' :>0}{'*' * frekvence :<16}{'|' :>5} {frekvence :<1}")
-#zarovnávání v printu je uděláno ručně, tedy blbě, protože při změně výstupů (třeba velký počet hvězdiček) to asi nebude
+# zarovnávání v printu je uděláno ručně, tedy blbě, protože při změně výstupů (třeba velký počet hvězdiček) to asi nebude
 # sedět. Jak to zarovnávání řídit právě podle měnících se prvků v grafu, to zatím netuším.
+# Viliam: prvne vzit nejvetsi frekvenci ze slovnik_delka_slov a podle toho si tam nastavit tu maximalni sirku v fstringu
